@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.top-bar {
+    background-color: #56b122;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 5%;
+    font-size: 13px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #474332;
+    border-radius: 20px;
+    color: white;
+    padding: 4px 12px;
+    margin-left: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.logo-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+}
+
+.brand-logo { 
+    font-size: 28px; 
+    color: #0a0000; 
+}
+
+.brand-logo span { 
+    color: #4dff00; 
+}
+
+.sub-nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.main-card-section {
+    display: flex;          
+    flex-wrap: wrap;        
+    justify-content: center; 
+    gap: 20px;             
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.card {
+    background-color: #fff;
+    width: 300px;           
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;      
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 5px grey;
+    transition: all 0.3s ease-in-out;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;      
+}
+
+.btn-action {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 60%;
+}
+
+.btn-action:hover {
+    background-color: #090909;
+    color: white;
+    width: 90%;
+    transition: all 0.5s ease-in-out;
+    border-radius: 20px;
+}
