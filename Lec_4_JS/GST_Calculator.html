@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic GST Calculator!!</title>
+    
+    <script>
+        function calculateGST(){
+            var p = document.getElementById("p_value").value;
+            var n = document.getElementById("n_value").value;
+            var r = document.getElementById("r_value").value;
+
+            if(p == "" || n == "" || r == ""){
+                alert("Please fill all the fields!!");
+                return;
+            }else if(isNaN(p) || isNaN(n) || isNaN(r)){
+                alert("Please enter valid numbers!!");
+                return;
+            }else if(p < 0 || n < 0 || r < 0){
+                alert("Please enter positive numbers only!!");
+                return;
+            }else if(document.getElementById("gst_type").value == "compound_gst"){
+                var total = p * Math.pow((1 + r / 100), n) - p;
+                document.getElementById("total").value = total;
+                return;
+            }else{
+                var total = (p * n * r) / 100;
+                document.getElementById("total").value = total;
+                return;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="width: auto; color: aqua; background-color: brown; border-radius: 10px; padding: 10px; align-items: center; text-align: center;">
+        <h1>GST Calculator!</h1>
+        <hr>
+        Choose GST Type:
+        <select name="gst_type" id="gst_type">
+            <option value="simple_gst">Simple Interest</option>
+            <option value="compound_gst">Compound Interest</option>
+        </select><br><br>
+
+        P: <input type="text" name="P_value" id="p_value"><br>
+        N: <input type="text" name="N_value" id="n_value"><br>
+        R: <input type="text" name="R_value" id="r_value"><br><br>
+
+        <input type="button" value="Calculate" onclick="calculateGST()"><hr>
+        Total: <input type="text" name="Total" id="total">
+        
+    </div>
+    
+</body>
+</html>
