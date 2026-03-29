@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basic Calculator</title>
+    <script>
+        function calculation(Operation){
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            var result;
+
+            if(isNaN(num1) || isNaN(num2)){
+                alert("Please enter valid numbers!");
+                return;
+            }else if(document.getElementById("+").checked){
+                result = num1 + num2;
+            }else if(document.getElementById("-").checked){
+                result = num1 - num2;
+            }else if(document.getElementById("x").checked){
+                result = num1 * num2;
+            }else if(document.getElementById("/").checked){
+                result = num1 / num2;
+            }else{
+                document.write("Error!!!");
+            }
+
+        alert("Result: " + result);
+
+        
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center; font-size: 20px; background-color: lightblue; padding: 20px;">
+        <h1>Basic Calculator using basic JS!</h1>
+        <hr><br>
+
+        <h3>Choose Operation:</h3><br> 
+        +<input type="radio" name="opr" id="+">
+        -<input type="radio" name="opr" id="-">
+        x<input type="radio" name="opr" id="x">
+        /<input type="radio" name="opr" id="/">
+
+        <br><br>
+
+        Number 1: <input type="text" name="num1" id="num1"><br>
+        Number 2: <input type="text" name="num2" id="num2"><hr>
+        <input type="button" value="Calculate" onclick="calculation()" />
+    </div>
+    
+</body>
+</html>
