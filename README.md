@@ -1,33 +1,61 @@
-# Sarjen External Training
+# Project Overview
+This project is designed to provide an in-depth training platform for external users, focusing on various technologies and methodologies.
 
-A web-based external training platform built with JavaScript, HTML, and CSS.
+# Technologies
+- **Language:** Python
+- **Frameworks:** Flask, Django
+- **Database:** PostgreSQL
+- **Front-End:** React
 
-## 📋 Overview
+# Features
+- User authentication
+- Custom dashboards
+- Real-time notifications
+- Analytics and reporting tools
 
-Sarjen External Training is a responsive web application designed to provide external training resources and educational content. The project is built using modern web technologies and follows best practices for web development.
-
-## 🛠️ Technologies Used
-
-- **JavaScript** (58.3%) - Core application logic
-- **HTML** (33.1%) - Markup structure
-- **CSS** (8.6%) - Styling and layout
-
-## ✨ Features
-
-- Responsive web design
-- Interactive user interface
-- Clean and maintainable code structure
-- Cross-browser compatibility
-
-## 🚀 Getting Started
-
+# Getting Started
 ### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A text editor or IDE for development
+- Install Python 3.x
+- Install Node.js
+- Set up PostgreSQL database
 
 ### Installation
-
 1. Clone the repository:
-```bash
-git clone https://github.com/DevPatel2211/Sarjen-External-Training.git
+   ```bash
+   git clone https://github.com/DevPatel2211/Sarjen-External-Training.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Sarjen-External-Training
+   ```
+3. Install requirements:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the application:
+   ```bash
+   python app.py
+   ```
+
+# Project Structure
+```
+/Sarjen-External-Training
+├── /app                    # Main application folder
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── models.py
+│   └── ...
+├── /frontend              # Frontend application
+│   ├── /components
+│   └── /public
+└── requirements.txt
+```  
+
+# Development Guidelines
+- Use descriptive commit messages.
+- Document your code thoroughly.
+- Follow PEP 8 style guide for Python.
+
+# Author
+**Dev Patel**  
+[GitHub Profile](https://github.com/DevPatel2211)
