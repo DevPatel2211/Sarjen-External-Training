@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>1 to 100 Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            width: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center;">Numbers 1 to 100</h2>
+
+    <table id="numberTable"></table>
+
+    <script>
+        const table = document.getElementById("numberTable");
+
+        let num = 1;
+
+        for (let i = 0; i < 10; i++) {
+            let row = document.createElement("tr");
+
+            for (let j = 0; j < 10; j++) {
+                let cell = document.createElement("td");
+                cell.textContent = num;
+                row.appendChild(cell);
+                num++;
+            }
+
+            table.appendChild(row);
+        }
+    </script>
+
+</body>
+
+</html>

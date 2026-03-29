@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table></table>
+
+    <script>
+        const table = document.getElementById("numberTable");
+
+        let num = 1;
+
+        for (let i = 0; i < 10; i++) {
+            let row = document.createElement("tr");
+
+            for (let j = 0; j < 10; j++) {
+                let cell = document.createElement("td");
+                cell.textContent = num;
+                row.appendChild(cell);
+                num++;
+            }
+
+            table.appendChild(row);
+        }
+    </script>
+</body>
+
+</html>
