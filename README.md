@@ -1,61 +1,41 @@
-# Project Overview
-This project is designed to provide an in-depth training platform for external users, focusing on various technologies and methodologies.
+# Sarjen External Training — Completed
 
-# Technologies
-- **Language:** Python
-- **Frameworks:** Flask, Django
-- **Database:** PostgreSQL
-- **Front-End:** React
+This repository contains the exercises and tasks I completed as part of my external training internship at Sarjen Systems PVT LTD. All assigned tasks are finished and the repository reflects my final submissions.
 
-# Features
-- User authentication
-- Custom dashboards
-- Real-time notifications
-- Analytics and reporting tools
+- Intern: Dev Patel ([GitHub Profile](https://github.com/DevPatel2211))
+- Company: Sarjen Systems PVT LTD
+- Completed on: 2026-04-04
 
-# Getting Started
-### Prerequisites
-- Install Python 3.x
-- Install Node.js
-- Set up PostgreSQL database
+Repository language composition (approx.):
+- HTML: 51.5%
+- JavaScript: 42.3%
+- CSS: 6.2%
 
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/DevPatel2211/Sarjen-External-Training.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd Sarjen-External-Training
-   ```
-3. Install requirements:
-   ```bash
-   pip install -r requirements.txt
-   ```
-4. Run the application:
-   ```bash
-   python app.py
-   ```
+What is in this repository
 
-# Project Structure
-```
-/Sarjen-External-Training
-├── /app                    # Main application folder
-│   ├── __init__.py
-│   ├── routes.py
-│   ├── models.py
-│   └── ...
-├── /frontend              # Frontend application
-│   ├── /components
-│   └── /public
-└── requirements.txt
-```  
+- AP_React_Tasks/: React-based exercises and projects (see AP_React_Tasks/ap-react-tasks)
+- HTML_CSS_JS/: Static HTML/CSS/JavaScript tasks (open index.html in a browser)
+- Other folders contain supporting code, samples and notes from the training.
 
-# Development Guidelines
-- Use descriptive commit messages.
-- Document your code thoroughly.
-- Follow PEP 8 style guide for Python.
+How to run
 
-# Author
-**Dev Patel**  
+- React projects (example):
+  1. cd AP_React_Tasks/ap-react-tasks
+  2. npm install
+  3. npm start
+  Open http://localhost:3000
+
+- Static HTML/CSS/JS tasks: open the corresponding index.html files in your browser.
+
+Status
+
+This repository is marked as Completed — these are my final training submissions.
+
+License
+
+MIT
+
+Author
+
+Dev Patel  
 [GitHub Profile](https://github.com/DevPatel2211)
