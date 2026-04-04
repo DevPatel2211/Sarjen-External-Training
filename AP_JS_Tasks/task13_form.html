@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 13 - Form Validation</title>
+</head>
+<body>
+    <h2>Form</h2>
+
+    Enter Name: <input type="text" id="name"> <br><br>
+
+    Enter Mobile No: <input type="text" id="mobile"> <br><br>
+
+    Gender:
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <br><br>
+
+    Hobby:
+    <input type="checkbox" id="reading" value="Reading"> Reading
+    <input type="checkbox" id="dancing" value="Dancing"> Dancing
+    <input type="checkbox" id="singing" value="Singing"> Singing
+    <br><br>
+
+    City:
+    <select id="city">
+        <option value="">---Select City---</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+        <option value="Surat">Surat</option>
+        <option value="Vadodara">Vadodara</option>
+        <option value="Rajkot">Rajkot</option>
+    </select>
+    <br><br>
+
+    <button onclick="submitForm()">Submit Data</button>
+
+    <br><br>
+    <p id="output"></p>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var mobile = document.getElementById("mobile").value;
+            var city = document.getElementById("city").value;
+
+            // Validate Name
+            if (name == "") {
+                alert("Please enter your name!");
+                return;
+            }
+
+            // Validate Mobile
+            if (mobile == "") {
+                alert("Please enter your mobile number!");
+                return;
+            }
+            if (mobile.length != 10) {
+                alert("Mobile number must be 10 digits!");
+                return;
+            }
+
+            // Get Gender
+            var gender = "";
+            var radios = document.getElementsByName("gender");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    gender = radios[i].value;
+                }
+            }
+            if (gender == "") {
+                alert("Please select gender!");
+                return;
+            }
+
+            // Get Hobbies
+            var hobbies = [];
+            if (document.getElementById("reading").checked) hobbies.push("Reading");
+            if (document.getElementById("dancing").checked) hobbies.push("Dancing");
+            if (document.getElementById("singing").checked) hobbies.push("Singing");
+
+            if (hobbies.length == 0) {
+                alert("Please select at least one hobby!");
+                return;
+            }
+
+            // Validate City
+            if (city == "") {
+                alert("Please select a city!");
+                return;
+            }
+
+            // Display Data
+            document.getElementById("output").innerHTML =
+                "<b>Name:</b> " + name + "<br>" +
+                "<b>Mobile:</b> " + mobile + "<br>" +
+                "<b>Gender:</b> " + gender + "<br>" +
+                "<b>Hobby:</b> " + hobbies.join(", ") + "<br>" +
+                "<b>City:</b> " + city;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 1 - Counter Application</title>
+</head>
+<body>
+    <h2>Counter Application</h2>
+
+    <button onclick="increment()">Increment</button>
+    <button onclick="decrement()">Decrement</button>
+
+    <p id="count">0</p>
+
+    <script>
+        var count = 0;
+
+        function increment() {
+            if (count < 10) {
+                count = count + 1;
+                document.getElementById("count").innerHTML = count;
+            } else {
+                alert("Maximum value is 10!");
+            }
+        }
+
+        function decrement() {
+            if (count > 0) {
+                count = count - 1;
+                document.getElementById("count").innerHTML = count;
+            } else {
+                alert("Minimum value is 0!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 7 - OTP Based Timer</title>
+</head>
+<body>
+    <h2>OTP Based Timer</h2>
+
+    <p id="timerDisplay">00:30</p>
+
+    <button id="startBtn" onclick="startTimer()">Start Timer</button>
+    <button id="resendBtn" onclick="resendOTP()" style="display:none;">Resend OTP</button>
+
+    <script>
+        var seconds = 30;
+        var timer = null;
+
+        function startTimer() {
+            document.getElementById("startBtn").style.display = "none";
+            document.getElementById("resendBtn").style.display = "none";
+            seconds = 30;
+            updateDisplay();
+
+            timer = setInterval(function() {
+                seconds = seconds - 1;
+                updateDisplay();
+
+                if (seconds == 0) {
+                    clearInterval(timer);
+                    timer = null;
+                    document.getElementById("resendBtn").style.display = "inline";
+                    document.getElementById("startBtn").style.display = "inline";
+                }
+            }, 1000);
+        }
+
+        function updateDisplay() {
+            var mins = Math.floor(seconds / 60);
+            var secs = seconds % 60;
+
+            var minsStr = mins < 10 ? "0" + mins : mins;
+            var secsStr = secs < 10 ? "0" + secs : secs;
+
+            document.getElementById("timerDisplay").innerHTML = minsStr + ":" + secsStr;
+        }
+
+        function resendOTP() {
+            alert("OTP Resent!");
+            startTimer();
+        }
+    </script>
+</body>
+</html>

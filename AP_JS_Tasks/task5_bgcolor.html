@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 5 - Random Background Color</title>
+</head>
+<body>
+    <h2>Random Background Color</h2>
+
+    <p>Background color changes on every page refresh!</p>
+
+    <button onclick="changeColor()">Change Color Again</button>
+
+    <script>
+        function changeColor() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+            document.body.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+        }
+
+        // Change color on page load
+        changeColor();
+    </script>
+</body>
+</html>

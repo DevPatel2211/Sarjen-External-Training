@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3 - OTP Generator</title>
+</head>
+<body>
+    <h2>Random OTP Generator</h2>
+
+    <p>OTP: <span id="otp"></span></p>
+
+    <button onclick="generateOTP()">Generate New OTP</button>
+
+    <script>
+        function generateOTP() {
+            var otp = Math.floor(100000 + Math.random() * 900000);
+            document.getElementById("otp").innerHTML = otp;
+        }
+
+        // Generate OTP on page load
+        generateOTP();
+    </script>
+</body>
+</html>

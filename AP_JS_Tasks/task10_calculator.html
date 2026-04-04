@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 10 - Simple Calculator</title>
+</head>
+<body>
+    <h2>Simple Calculator</h2>
+
+    <input type="text" id="display" readonly> <br><br>
+
+    <button onclick="pressKey('1')">1</button>
+    <button onclick="pressKey('2')">2</button>
+    <button onclick="pressKey('3')">3</button>
+    <button onclick="pressKey('+')">+</button>
+    <br>
+    <button onclick="pressKey('4')">4</button>
+    <button onclick="pressKey('5')">5</button>
+    <button onclick="pressKey('6')">6</button>
+    <button onclick="pressKey('-')">-</button>
+    <br>
+    <button onclick="pressKey('7')">7</button>
+    <button onclick="pressKey('8')">8</button>
+    <button onclick="pressKey('9')">9</button>
+    <button onclick="pressKey('*')">*</button>
+    <br>
+    <button onclick="pressKey('.')">.</button>
+    <button onclick="pressKey('0')">0</button>
+    <button onclick="pressKey('=')">=</button>
+    <button onclick="pressKey('/')">/</button>
+    <br>
+    <button onclick="clearDisplay()">C</button>
+
+    <script>
+        var expression = "";
+
+        function pressKey(key) {
+            if (key == "=") {
+                var result = eval(expression);
+                document.getElementById("display").value = result;
+                expression = String(result);
+            } else {
+                expression = expression + key;
+                document.getElementById("display").value = expression;
+            }
+        }
+
+        function clearDisplay() {
+            expression = "";
+            document.getElementById("display").value = "";
+        }
+    </script>
+</body>
+</html>

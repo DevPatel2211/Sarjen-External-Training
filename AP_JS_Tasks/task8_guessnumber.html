@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 8 - Guess the Number</title>
+</head>
+<body>
+    <h2>Guess the Number</h2>
+
+    <p>Guess a number between 1 and 100</p>
+
+    <input type="text" id="userGuess" placeholder="Enter your guess">
+    <button onclick="checkGuess()">Check</button>
+
+    <p id="result"></p>
+
+    <script>
+        var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        function checkGuess() {
+            var userInput = document.getElementById("userGuess").value;
+            var guess = parseInt(userInput);
+
+            if (guess == randomNumber) {
+                document.getElementById("result").innerHTML = "Correct! The number was " + randomNumber;
+            } else if (guess < randomNumber) {
+                document.getElementById("result").innerHTML = "Too Low! Try again.";
+            } else {
+                document.getElementById("result").innerHTML = "Too High! Try again.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 12 - Todo Application</title>
+</head>
+<body>
+    <h2>TODO List</h2>
+
+    <input type="text" id="todoInput" placeholder="Enter task">
+    <button onclick="addTodo()">Add TODO</button>
+
+    <ul id="todoList"></ul>
+
+    <script>
+        function addTodo() {
+            var input = document.getElementById("todoInput");
+            var text = input.value;
+
+            if (text == "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            var li = document.createElement("li");
+            li.id = "item_" + Date.now();
+
+            var span = document.createElement("span");
+            span.innerHTML = text;
+            span.id = "text_" + li.id;
+
+            var editBtn = document.createElement("button");
+            editBtn.innerHTML = "Edit";
+            editBtn.onclick = function() {
+                editTodo(li.id);
+            };
+
+            var deleteBtn = document.createElement("button");
+            deleteBtn.innerHTML = "Delete";
+            deleteBtn.onclick = function() {
+                deleteTodo(li.id);
+            };
+
+            li.appendChild(span);
+            li.appendChild(editBtn);
+            li.appendChild(deleteBtn);
+
+            document.getElementById("todoList").appendChild(li);
+            input.value = "";
+        }
+
+        function editTodo(id) {
+            var span = document.getElementById("text_" + id);
+            var newText = prompt("Edit task:", span.innerHTML);
+            if (newText != null && newText != "") {
+                span.innerHTML = newText;
+            }
+        }
+
+        function deleteTodo(id) {
+            var li = document.getElementById(id);
+            li.remove();
+        }
+    </script>
+</body>
+</html>

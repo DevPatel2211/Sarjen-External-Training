@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 4 - Digital Clock</title>
+</head>
+<body>
+    <h2>Digital Clock</h2>
+
+    <p id="clock"></p>
+
+    <script>
+        function showTime() {
+            var now = new Date();
+            var date = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+            document.getElementById("clock").innerHTML = date + "  " + time;
+        }
+
+        showTime();
+        setInterval(showTime, 1000);
+    </script>
+</body>
+</html>
